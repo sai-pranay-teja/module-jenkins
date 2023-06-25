@@ -18,6 +18,3 @@ provider "jenkins" {
   password   = aws_ssm_parameter.pass.value
 
 }
-/* resource "jenkins_job" "example" {
-
-} */
