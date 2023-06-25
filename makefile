@@ -1,5 +1,4 @@
-git:
-	git pull
+
 
 # s3-apply: git
 # 	cd /home/pranay/roboshop/roboshop-terraform/s3; terraform init; \
@@ -19,7 +18,7 @@ git:
 # 	cd /home/pranay/roboshop/roboshop-terraform/s3; terraform destroy -auto-approve
 
 
-jenkins-apply: git
+jenkins-apply:
 	terraform init
 	terraform apply -auto-approve
 
