@@ -12,6 +12,6 @@ variable "folder_name"{
 
 variable "s-jobs" {
     default=[
-        {name="Infra", repo_url="https://github.com/sai-pranay-teja/roboshop-terraform", filename="Infra-setup", folder="Infra"}
+        {name="Infra", repo_url="https://github.com/sai-pranay-teja/roboshop-terraform", filename="Infra-setup", folder="Infra-folder"}
     ] 
 }
