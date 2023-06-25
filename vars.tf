@@ -15,3 +15,8 @@ variable "s-jobs" {
         {name="Infra", repo_url="https://github.com/sai-pranay-teja/roboshop-terraform", filename="Infra-setup", folder="Infra-folder"}
     ] 
 }
+
+variable "all_repo" {
+    default="https://github.com/sai-pranay-teja/module-jenkins"
+  
+}
