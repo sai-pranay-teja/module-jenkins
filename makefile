@@ -21,11 +21,11 @@ git:
 
 jenkins-apply: git
 	terraform init
-	terraform apply -var-file=env-dev/main.tfvars -auto-approve
+	terraform apply -auto-approve
 
 
 jenkins-destroy:
-	terraform destroy -var-file=env-dev/main.tfvars -auto-approve
+	terraform destroy -auto-approve
 
 
 # s3-apply: git
