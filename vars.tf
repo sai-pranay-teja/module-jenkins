@@ -16,3 +16,7 @@ variable "s-jobs" {
     ] 
 }
 
+variable "all_repo" {
+    default="https://github.com/sai-pranay-teja/module-jenkins"
+  
+}
