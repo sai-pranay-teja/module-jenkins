@@ -1,4 +1,4 @@
-/* 
+
 resource "jenkins_job" "initial-jobs" {
     name     = "All-Jobs-setup"
     template = templatefile("${path.module}/initial.xml", {
@@ -12,4 +12,4 @@ resource "jenkins_job" "initial-jobs" {
     lifecycle {
       ignore_changes = [ template ]
     }
-} */
+}
