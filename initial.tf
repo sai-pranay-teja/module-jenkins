@@ -8,7 +8,7 @@ resource "jenkins_folder" "all_jobs" {
 resource "jenkins_job" "initial-jobs" {
     depends_on = [ jenkins_folder.all_jobs ]
     name     = "All-Jobs-setup"
-    folder=jenkins_folder.all_jobs.id
+    folder="/job/${jenkins_folder.all_jobs.id}"
     template = templatefile("${path.module}/initial.xml", {
         repo_url=var.all_repo
         name     = "All-Jobs-setup"
