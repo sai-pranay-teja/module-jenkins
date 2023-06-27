@@ -7,7 +7,7 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.ChoiceParameterDefinition>
-          <name>INFRA</name>
+          <name>${name}</name>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
               <string>apply</string>
@@ -22,7 +22,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/sai-pranay-teja/module-jenkins</url>
+        <url>${repo_url}</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
