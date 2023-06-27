@@ -10,7 +10,7 @@ resource "jenkins_job" "initial-jobs" {
     name     = "All-Jobs-setup"
     folder="/job/all_jobs"
     template = templatefile("${path.module}/initial.xml", {
-        repo_url=var.all_repo
+        all_repo=var.all_repo
         name     = "All-Jobs-setup"
         filename="All-jobs-setup"
         description = "Roboshop Pipeline for Infra"
