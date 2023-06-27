@@ -11,8 +11,6 @@ resource "jenkins_job" "s-jobs" {
     template = templatefile("${path.module}/config.xml", {
         repo_url=lookup(element(var.s-jobs, count.index), "repo_url")
         name     = lookup(element(var.s-jobs, count.index), "name")
-        filename=lookup(element(var.s-jobs, count.index), "filename")
-
         description = "Roboshop Pipeline for Infra"
     })
 
