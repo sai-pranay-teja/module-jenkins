@@ -18,3 +18,4 @@ resource "jenkins_job" "s-jobs" {
       ignore_changes = [ template ]
     }
 }
+
