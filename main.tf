@@ -22,11 +22,11 @@ resource "jenkins_job" "s-jobs" {
 resource "jenkins_job" "m-jobs" {
     depends_on = [ jenkins_folder.roboshop_folder]
     count = length(var.m-jobs)
-    name     = lookup(element(var.s-jobs, count.index), "name")
-    folder   = lookup(element(var.s-jobs, count.index), "folder")
+    name     = lookup(element(var.m-jobs, count.index), "name")
+    folder   = lookup(element(var.m-jobs, count.index), "folder")
     template = templatefile("${path.module}/m-jobs.xml", {
-        repo_url=lookup(element(var.s-jobs, count.index), "repo_url")
-        name     = lookup(element(var.s-jobs, count.index), "name")
+        repo_url=lookup(element(var.m-jobs, count.index), "repo_url")
+        name     = lookup(element(var.m-jobs, count.index), "name")
         description = "Roboshop Pipeline for Infra"
     })
 
