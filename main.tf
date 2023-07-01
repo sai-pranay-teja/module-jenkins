@@ -3,12 +3,28 @@ resource "jenkins_folder" "roboshop_folder" {
     name = element(var.folder_name, count.index)
 }
 
-resource "jenkins_job" "s-jobs" {
+/* resource "jenkins_job" "s-jobs" {
     depends_on = [ jenkins_folder.roboshop_folder]
-    count = length(var.s-jobs)
+    count = length(var.m-jobs)
     name     = lookup(element(var.s-jobs, count.index), "name")
     folder   = lookup(element(var.s-jobs, count.index), "folder")
     template = templatefile("${path.module}/s-jobs.xml", {
+        repo_url=lookup(element(var.s-jobs, count.index), "repo_url")
+        name     = lookup(element(var.s-jobs, count.index), "name")
+        description = "Roboshop Pipeline for Infra"
+    })
+
+    lifecycle {
+      ignore_changes = [ template ]
+    }
+} */
+
+resource "jenkins_job" "m-jobs" {
+    depends_on = [ jenkins_folder.roboshop_folder]
+    count = length(var.m-jobs)
+    name     = lookup(element(var.s-jobs, count.index), "name")
+    folder   = lookup(element(var.s-jobs, count.index), "folder")
+    template = templatefile("${path.module}/m-jobs.xml", {
         repo_url=lookup(element(var.s-jobs, count.index), "repo_url")
         name     = lookup(element(var.s-jobs, count.index), "name")
         description = "Roboshop Pipeline for Infra"

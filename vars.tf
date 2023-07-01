@@ -10,7 +10,7 @@ variable "folder_name"{
     default=["Infra-folder", "CI-Pipeline"]
 }
 
-variable "s-jobs" {
+variable "m-jobs" {
     default=[
         {name="Infra", repo_url="https://github.com/sai-pranay-teja/roboshop-terraform", folder="Infra-folder"},
         {name="frontend", repo_url="https://github.com/sai-pranay-teja/frontend", folder="CI-Pipeline"},
@@ -23,3 +23,6 @@ variable "s-jobs" {
 }
 
 
+variable "s-jobs" {
+    default=[] 
+}
