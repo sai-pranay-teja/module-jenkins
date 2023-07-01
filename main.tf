@@ -3,7 +3,7 @@ resource "jenkins_folder" "roboshop_folder" {
     name = element(var.folder_name, count.index)
 }
 
-/* resource "jenkins_job" "s-jobs" {
+resource "jenkins_job" "s-jobs" {
     depends_on = [ jenkins_folder.roboshop_folder]
     count = length(var.m-jobs)
     name     = lookup(element(var.s-jobs, count.index), "name")
@@ -17,7 +17,7 @@ resource "jenkins_folder" "roboshop_folder" {
     lifecycle {
       ignore_changes = [ template ]
     }
-} */
+}
 
 resource "jenkins_job" "m-jobs" {
     depends_on = [ jenkins_folder.roboshop_folder]

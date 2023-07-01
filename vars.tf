@@ -12,7 +12,7 @@ variable "folder_name"{
 
 variable "m-jobs" {
     default=[
-        {name="Infra", repo_url="https://github.com/sai-pranay-teja/roboshop-terraform", folder="Infra-folder"},
+        
         {name="frontend", repo_url="https://github.com/sai-pranay-teja/frontend", folder="CI-Pipeline"},
         {name="cart", repo_url="https://github.com/sai-pranay-teja/cart", folder="CI-Pipeline"},
         {name="catalogue", repo_url="https://github.com/sai-pranay-teja/catalogue",  folder="CI-Pipeline"},
@@ -24,5 +24,7 @@ variable "m-jobs" {
 
 
 variable "s-jobs" {
-    default=[] 
+    default=[
+        {name="Infra", repo_url="https://github.com/sai-pranay-teja/roboshop-terraform", folder="Infra-folder"},
+    ] 
 }
