@@ -19,7 +19,7 @@ variable "m-jobs" {
         {name="shipping", repo_url="https://github.com/sai-pranay-teja/shipping", folder="CI-Pipeline"},
         {name="user", repo_url="https://github.com/sai-pranay-teja/user", folder="CI-Pipeline"},
         {name="payment", repo_url="https://github.com/sai-pranay-teja/payment", folder="CI-Pipeline"},
-        {name="aws-param", repo_url="https://github.com/sai-pranay-teja/aws-params-for-k8s", folder="CI-Pipeline"}
+        {name="aws-param", repo_url="https://github.com/sai-pranay-teja/aws-params", folder="CI-Pipeline"}
     ] 
 }
 
