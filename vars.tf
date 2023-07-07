@@ -27,6 +27,7 @@ variable "m-jobs" {
 variable "s-jobs" {
     default=[
         {name="Infra", repo_url="https://github.com/sai-pranay-teja/roboshop-terraform", folder="Infra-folder"},
-        {name="Ansible-Deployment", repo_url="https://github.com/sai-pranay-teja/roboshop-ansible", folder="Infra-folder"}
+        {name="Ansible-Deployment", repo_url="https://github.com/sai-pranay-teja/roboshop-ansible", folder="Infra-folder"},
+        {name="Helm-Deployment", repo_url="https://github.com/sai-pranay-teja/roboshop-helm-chart.git", folder="Infra-folder"}
     ] 
 }
